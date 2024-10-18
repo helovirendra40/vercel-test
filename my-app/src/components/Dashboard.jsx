@@ -9,7 +9,7 @@ function Dashboard({ token }) {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/dashboard', {
+        const res = await axios.get('https://vercel-test-api-tan.vercel.app/dashboard', {
           headers: {
             Authorization: token,
           },
