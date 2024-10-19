@@ -26,7 +26,7 @@ function Dashboard({ token }) {
   // Logout function to clear token and redirect to login
   const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate('/login');
+    navigate('https://vercel-test-api-tan.vercel.app/login');
   };
 
   return (
