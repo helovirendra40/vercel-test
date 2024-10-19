@@ -13,7 +13,7 @@ function App() {
 
   const handleLogin = async (username, password) => {
     try {
-      const res = await axios.post('https://vercel-test-api-tan.vercel.app/login', { username, password });
+      const res = await axios.post('http://localhost:5000/login', { username, password });
       localStorage.setItem('token', res.data.token);
       setToken(res.data.token);
     } catch (error) {
@@ -23,7 +23,7 @@ function App() {
 
   const handleRegister = async (username, password) => {
     try {
-      await axios.post('https://vercel-test-api-tan.vercel.app/register', { username, password });
+      await axios.post('http://localhost:5000/register', { username, password });
       alert('User Registered!');
     } catch (error) {
       console.error('Registration failed', error);
@@ -41,10 +41,10 @@ function App() {
     <Router>
     <div className='container-fluid'>
       <div className='row'>
-      <div className='col-md-3 h-100vh leftNav'>
+      <div className='col-md-2 h-100vh leftNav'>
         <Menu />
       </div>
-      <div className='col-md-9 h-100vh offset-md-3 position-relative'>
+      <div className='col-md-10 h-100vh offset-md-2 position-relative'>
       
       <Routes>
         <Route path="/" element={<ExchangeList />} />
