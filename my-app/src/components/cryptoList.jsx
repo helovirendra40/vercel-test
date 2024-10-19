@@ -83,7 +83,7 @@ const ExchangeList = () => {
     setCurrentPage(data.selected);
   };
 
-  // Calculate the displayed items based on pagination
+  // Calculate pagination
   const offset = currentPage * itemsPerPage;
   const paginatedData = filteredData.slice(offset, offset + itemsPerPage);
 
@@ -138,23 +138,7 @@ const ExchangeList = () => {
                 <p>No results found</p>
               )
         }
-          {/* {paginatedData.map((exchange) => (
-            <li className='d-flex justify-content-between align-items-center' key={exchange.exchange_id}>
-              <span className='d-flex g-3'>
-                <img
-                  className='mr-2'
-                  src={exchange.url ? exchange.url : 'https://cdn4.iconfinder.com/data/icons/ui-beast-4/32/Ui-12-512.png'}
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://cdn4.iconfinder.com/data/icons/ui-beast-4/32/Ui-12-512.png';
-                  }}
-                  alt={exchange.name}
-                />
-                <strong>{exchange.name}</strong>
-              </span>
-              <p> ({exchange.volume_1mth_usd})</p>
-            </li>
-          ))} */}
+          
         </ul>
 
         <ReactPaginate
