@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,26 +13,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body{
+  font-family: "Rajdhani", sans-serif;
   /* background: linear-gradient(rgb(255, 1, 200), rgb(58, 143, 255));  */
-  background-image: url('../public/bg.jpg');
+  background-image: url('https://i.pinimg.com/736x/b2/fb/21/b2fb21f206c56acc2007ed7e587d9770.jpg');
   background-size: cover; color: #fff;
   /* background-image: url(https://img.freepik.com/premium-vector/background-contour-topographic-map-abstract-topography-geography-grid-background-business-concept_206325-1656.jpg?w=996); */
 background-size: 100% 100%;  
   height: 100%; width: 100%;
 }
-body::before {
+/* body::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Adjust the color and opacity */
-  z-index: 0; /* To make sure the overlay is behind the content */
-}
+  background-color: rgba(0, 0, 0, 0.2); 
+  z-index: 0; 
+} */
 .cryptoData img{ height: 30px; margin-right: 10px;}
-.cryptoDataTable{ max-width: 600px; margin: 0px auto; margin-bottom: 30px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 15px; border-radius: 10px;}
+.cryptoDataTable{ max-width: 600px; margin: 0px auto; margin-bottom: 30px; background: rgba(36, 39, 6, 0.3); backdrop-filter: blur(10px); padding: 15px; border-radius: 10px;}
 .cryptoData  li{ border-bottom: 2px solid #fff;}
 .cryptoDataTable input, .cryptoDataTable input:hover, .cryptoDataTable input:focus{  background: none; border: 0px; color: #fff; box-shadow: none;}
 .cryptoDataTable input::placeholder{ color: #fff;}
@@ -48,9 +51,10 @@ body::before {
   border-radius: 10px;
   /* color: #000; */
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(10px);}
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);}
 .leftNav{ background: #000; position: fixed;}
 .h-100vh{ height: 100vh !important;}
 .btn, .btn:hover, .btn:active, .btn:focus-visible{ background-color: #fd8c13 !important; border: #fd8c13;}
@@ -85,3 +89,51 @@ li.page-item > a , .page-item:first-child .page-link, .page-item:last-child .pag
 }
 .leftNav a:hover{ color: #fd8c13;}
 .leftNav ul{ list-style: none;}
+
+
+
+
+
+
+
+
+
+
+
+.card1{height: 150px;width: 150px; position: absolute; top: 20%; left: 20%; background: rgba(255, 255, 255, 0.2); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .card2{height: 80px;width: 80px; position: absolute; top: 80%; left: 30%; background: rgba(255, 255, 255, 0.2); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .card3{height: 50px;width: 50px; position: absolute; top: 25%; left: 64%; background: rgba(255, 255, 255, 0.2); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .card4{height: 150px;width: 150px; position: absolute; top: 60%; left: 60%; background: rgba(255, 255, 255, 0.2); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3); }
+.card1{animation: myfirst1 10s linear 0s infinite;}
+.card2{animation: myfirst2 10s linear 0s infinite;}
+.card3{animation: myfirst3 10s linear 0s infinite;}
+.card4{animation: myfirst4 10s linear 0s infinite;}
+
+@keyframes myfirst1 {
+  0% { top: 10%;}
+  25% {top: 15%}
+  50% {top: 20%}
+  75% {top: 15%}
+  100% {top: 10%}
+}
+@keyframes myfirst2 {
+  0% { top: 80%; }
+  25% {top: 70%;}
+  50% {top: 60%;}
+  75% {top: 70%;}
+  100% {top: 80%;}
+}
+@keyframes myfirst3 {
+  0% { top: 15%;}
+  25% {top: 20%;}
+  50% {top: 25%; }
+  75% {top: 20%;}
+  100% {top: 15%;}
+}
+@keyframes myfirst4 {
+    0% { top: 60%; }
+  25% {top: 50%;}
+  50% {top: 40%;}
+  75% {top: 60%;}
+  100% {top: 60%;}
+}
