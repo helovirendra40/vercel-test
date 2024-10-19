@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -10,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const JWT_SECRET = 'your_secret_key';
-
+const PORT = 5000;
 // User Schema
 const UserSchema = new mongoose.Schema({
     username: String,
@@ -18,7 +17,7 @@ const UserSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', UserSchema);
 
-// Connect to MongoDB (replace with your connection string)
+// Connect to MongoDB
 mongoose.connect('mongodb+srv://helovirendra40:UVsu2eMcJjDosJAP@cluster0.v0pbc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 // Register route
@@ -71,6 +70,6 @@ app.get('/dashboard', async (req, res) => {
 
 
 // Start server
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log('Server running on port 5000');
 });
